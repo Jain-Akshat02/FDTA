@@ -7,7 +7,7 @@ const features = [
   "Priority registration for events",
   "Direct access to trade experts",
   "Member-only networking sessions",
-  "Premium resource library",
+  "Access to members only meetings",
   "24/7 member support"
 ];
 

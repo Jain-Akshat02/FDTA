@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +13,17 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="flex justify-between items-center px-8 py-4 bg-primary/95 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-lg"
+      className="flex items-center px-8 py-4 bg-primary/95 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-lg"
     >
-      <Link href="/" className="text-2xl font-bold text-white hover:text-gray-200 transition-colors">
-        TradeConnect
+      <Link href="/">
+        <Image src="/logo.png" alt="Logo" width={50} height={50} className="rounded-full"/>
+      </Link>
+      <Link href="/" className="text-2xl font-bold text-white hover:text-gray-200 transition-colors ml-3">
+        FDTA
       </Link>
       
       {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-8">
+      <div className="hidden md:flex gap-15 ml-160">
         <Link href="/" className="text-white hover:text-gray-200 transition-colors font-medium">Home</Link>
         <Link href="/about" className="text-white hover:text-gray-200 transition-colors font-medium">About</Link>
         <Link href="/contact" className="text-white hover:text-gray-200 transition-colors font-medium">Contact</Link>

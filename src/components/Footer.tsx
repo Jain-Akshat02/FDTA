@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-3xl font-bold text-white mb-4 inline-block">
-              TradeConnect
+              Federation of Delhi Trade Association(Regd.)
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Empowering global trade professionals with insights, networking, and resources for a better business future.
@@ -23,7 +23,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/faivm.delhipradesh/" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
             </div>

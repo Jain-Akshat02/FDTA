@@ -101,11 +101,11 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center gap-8 text-gray-500">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>
-              <span className="text-sm">500+ Active Members</span>
+              <span className="text-sm">1 Cr+ Active Members</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>
-              <span className="text-sm">25+ Years Experience</span>
+              <span className="text-sm">60+ Years Experience</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>
