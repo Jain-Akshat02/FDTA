@@ -47,15 +47,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">123 Trade Center, Global City, GC 12345</span>
+                <span className="text-gray-300 text-sm">3848 Gali Mandir Wali, Pahari Dhiraj, Delhi-110006</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+91 8010090563</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">info@tradeconnect.org</span>
+                <span className="text-gray-300 text-sm">devokorvin3@gmail.com</span>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} TradeConnect Association. All rights reserved.
+              © {new Date().getFullYear()} Federation of Delhi Trade Association. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
