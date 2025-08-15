@@ -13,17 +13,17 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="flex items-center px-8 py-4 bg-primary/95 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-lg"
+      className="flex justify-between items-center px-8 py-4 bg-primary/95 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-lg"
     >
-      <Link href="/">
+      <Link href="/" className="flex items-center gap-3">
         <Image src="/logo.png" alt="Logo" width={50} height={50} className="rounded-full"/>
-      </Link>
-      <Link href="/" className="text-2xl font-bold text-white hover:text-gray-200 transition-colors ml-3">
-        FDTA
+        <span className="text-xl font-bold text-white hover:text-gray-200 transition-colors whitespace-nowrap">
+          Federation of Delhi Trade Association
+        </span>
       </Link>
       
       {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-15 ml-160">
+      <div className="hidden md:flex gap-8">
         <Link href="/" className="text-white hover:text-gray-200 transition-colors font-medium">Home</Link>
         <Link href="/about" className="text-white hover:text-gray-200 transition-colors font-medium">About</Link>
         <Link href="/contact" className="text-white hover:text-gray-200 transition-colors font-medium">Contact</Link>

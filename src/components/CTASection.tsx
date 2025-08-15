@@ -38,7 +38,7 @@ export default function CTASection() {
             viewport={{ once: true }}
             className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto"
           >
-            Join thousands of successful trade professionals who have accelerated their growth through our comprehensive association.
+            Join thousands of successful trade professionals who have accelerated their growth and broken through barriers by working together
           </motion.p>
 
           <motion.div

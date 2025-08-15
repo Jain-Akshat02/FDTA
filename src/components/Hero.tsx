@@ -27,7 +27,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <Globe size={16} />
-              Global Trade Association
+              National Trade Association
             </motion.div>
             
             <motion.h1
@@ -71,12 +71,11 @@ export default function Hero() {
               className="flex gap-8 mt-12"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">1 Cr+</div>
+                <div className="text-3xl font-bold text-white">10 lakh+</div>
                 <div className="text-gray-200 text-sm">Active Members</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">10+</div>
-                <div className="text-gray-200 text-sm">Countries</div>
+                
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">60+</div>

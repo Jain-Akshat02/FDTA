@@ -4,26 +4,26 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, Global Trade Solutions",
-    company: "New York, USA",
-    content: "TradeConnect has been instrumental in expanding our international reach. The networking opportunities and market insights have directly contributed to our 300% growth in the past two years.",
+    name: "Praveen Anand",
+    role: "President",
+    company: "Wholesale Hosiery Association",
+    content: "FDTA has been instrumental in expanding our national reach. The networking opportunities and market insights have directly contributed to our growth in multiple folds the past two years.",
     rating: 5,
     image: "/src/Pictures/image.png"
   },
   {
-    name: "Michael Chen",
-    role: "Director of International Trade",
-    company: "Shanghai, China",
-    content: "The regulatory support and professional development programs have given our team the expertise needed to navigate complex international markets successfully.",
+    name: "Devraj baweja",
+    role: "Director",
+    company: "Delhi Vyapar Mahasangh",
+    content: "The regulatory support and professional development programs have given our team the expertise and vision needed to navigate complex markets successfully.",
     rating: 5,
     image: "/src/Pictures/image.png"
   },
   {
-    name: "Elena Rodriguez",
-    role: "Trade Consultant",
-    company: "Madrid, Spain",
-    content: "Being part of TradeConnect has opened doors to partnerships I never thought possible. The association truly understands the needs of modern trade professionals.",
+    name: "Yogesh Singhal",
+    role: "Chairman",
+    company: "All Bullion Jewllers Association",
+    content: "Being part of FDTA has opened doors to partnerships I never thought possible. The association truly understands the needs of modern trade professionals.",
     rating: 5,
     image: "/src/Pictures/image.png"
   }
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center gap-8 text-gray-500">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>
-              <span className="text-sm">1 Cr+ Active Members</span>
+              <span className="text-sm">10 lakh+ Active Members</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>

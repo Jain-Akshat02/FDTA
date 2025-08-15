@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-3xl font-bold text-white mb-4 inline-block">
-              Federation of Delhi Trade Association(Regd.)
+              Federation of Delhi Trade Association (Regd. 1967)
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Empowering global trade professionals with insights, networking, and resources for a better business future.
