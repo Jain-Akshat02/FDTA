@@ -45,7 +45,7 @@ export default function BenefitsSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Why Choose <span className="text-white">TradeConnect</span>?
+              Why Choose <span className="text-white">FDTA</span>?
             </h2>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
               Join thousands of trade professionals who have transformed their careers and businesses through our comprehensive support system.
