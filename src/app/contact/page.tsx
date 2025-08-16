@@ -1,7 +1,27 @@
-
+"use client";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-
+import axios from "axios"
 export default function Contact() {
+  async function handleSubmit(e:any) {
+  e.preventDefault();
+  const formData = {
+    name: e.target.firstName.value,
+    email: e.target.email.value,
+    phone: e.target.phone.value,
+    message: e.target.message.value,
+  };
+
+  const res = await axios.post("/api/contact", formData,{
+    headers:{"content-type": "application/json"}
+  });
+  if(res.status === 200) {
+    alert("Message sent successfully");
+  }
+  else{
+    alert("Something went wrong");
+  }
+}
+
   return (
     <div className="bg-gradient-to-br from-primary via-secondary to-primary">
       <section className="px-6 py-20 max-w-6xl mx-auto">
@@ -66,7 +86,7 @@ export default function Contact() {
           {/* Form */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-white font-medium mb-2">
@@ -118,7 +138,7 @@ export default function Contact() {
 
               <button 
                 type="submit" 
-                className="w-full bg-accent text-black py-4 rounded-lg font-semibold hover:bg-accent/90 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-accent text-black py-4 rounded-lg font-semibold hover:bg-accent/90 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send className="w-5 h-5" />
                 Send Message
