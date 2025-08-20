@@ -2,13 +2,14 @@
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import axios from "axios"
 export default function Contact() {
-  async function handleSubmit(e:any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
+  const form = e.currentTarget;
   const formData = {
-    name: e.target.firstName.value,
-    email: e.target.email.value,
-    phone: e.target.phone.value,
-    message: e.target.message.value,
+    name: (form.firstName as HTMLInputElement).value,
+    email: (form.email as HTMLInputElement).value,
+    phone: (form.phone as HTMLInputElement).value,
+    message: (form.message as HTMLTextAreaElement).value,
   };
 
   const res = await axios.post("/api/contact", formData,{
@@ -31,7 +32,7 @@ export default function Contact() {
         </h1>
         <p className="text-gray-300 text-lg text-center max-w-3xl mx-auto mb-16">
           Get in touch with us for any inquiries, support, or collaboration opportunities. 
-          We're here to help you succeed.
+          We&apos;re here to help you succeed.
         </p>
 
         {/* Contact Information Cards */}
