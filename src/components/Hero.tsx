@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Users, Globe, TrendingUp } from "lucide-react";
+import { ArrowRight, Users, Globe } from "lucide-react";
 
 export default function Hero() {
   return (
