@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 export async function POST(req:any) {
-    console.log(req);
+    console.log(req); //hello
+    
   try {
 
     const { name, email, phone, message } = await req.json();
