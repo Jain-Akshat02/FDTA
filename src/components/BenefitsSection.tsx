@@ -36,7 +36,7 @@ export default function BenefitsSection() {
   return (
     <section className="py-20 bg-primary text-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}

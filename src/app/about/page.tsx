@@ -10,32 +10,32 @@ export default function About() {
       id: 1,
       image:
         "/card4.png",
-      className: "absolute top-10 left-[20%] rotate-[-5deg]",
+      className: "absolute top-4 left-0 md:top-10 md:left-[20%] rotate-[-5deg]",
     },
     {
       title: "FOR YOU",
       id:2,
       image:
         "/card3.png",
-      className: "absolute top-40 left-[25%] rotate-[-7deg]",
+      className: "absolute top-48 left-4 md:top-40 md:left-[25%] rotate-[-7deg]",
     },
     {
       title: "FOR THE ISSUES",
       id:3,
       image:
         "/card2.png",
-      className: "absolute top-5 left-[40%] rotate-[8deg]",
+      className: "absolute top-10 right-0 md:left-[40%] rotate-[8deg]",
     },
     {
       title: "THAT MATTER",
       id:4,
       image: "/card1.png",
-      className: "absolute top-32 left-[55%] rotate-[10deg]",
+      className: "absolute top-56 right-4 md:left-[55%] rotate-[10deg]",
     }
   ];
   return (
     <div className="bg-gradient-to-br from-primary via-secondary to-primary">
-      <section className="px-6 py-20 max-w-6xl mx-auto ">
+      <section className="px-6 py-10 lg:py-20 max-w-6xl mx-auto ">
         {/* Heading */}
         <h1 className="text-4xl font-bold mb-6 text-center">
           About Our Community
@@ -136,9 +136,9 @@ export default function About() {
             alt={item.title}
             width={320}
             height={320}
-            className="pointer-events-none relative z-10 h-80 w-80 object-cover"
+            className="pointer-events-none relative z-10 h-48 w-48 md:h-80 md:w-80 object-cover"
           />
-          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+          <h3 className="mt-4 text-center text-xl md:text-2xl font-bold text-neutral-700 dark:text-neutral-300">
             {item.title}
           </h3>
         </DraggableCardBody>

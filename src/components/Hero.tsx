@@ -11,7 +11,7 @@ export default function Hero() {
         
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-6 py-10 md:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <motion.div
@@ -34,7 +34,7 @@ export default function Hero() {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
               Connecting <span className="text-white">Trade</span> Across Borders
             </motion.h1>
@@ -68,7 +68,7 @@ export default function Hero() {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex gap-8 mt-12"
+              className="flex flex-wrap justify-center sm:justify-start gap-8 mt-12"
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">10 lakh+</div>
