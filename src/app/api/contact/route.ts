@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
 dotenv.config();
-export async function POST(req:any) {
+export async function POST(req: Request) {
     console.log(req); //hello
     
   try {
