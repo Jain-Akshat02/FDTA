@@ -15,9 +15,9 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="flex justify-between items-center px-8 py-4 bg-primary/95 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-lg"
     >
-      <Link href="/" className="flex items-center gap-3">
-        <Image src="/logo.png" alt="Logo" width={50} height={50} className="rounded-full"/>
-        <span className="text-xl font-bold text-white hover:text-gray-200 transition-colors whitespace-nowrap">
+      <Link href="/" className="flex items-center gap-2 md:gap-3">
+        <Image src="/logo.png" alt="Logo" width={50} height={50} className="rounded-full w-10 h-10 md:w-[50px] md:h-[50px] flex-shrink-0"/>
+        <span className="text-sm sm:text-base md:text-xl font-bold text-white hover:text-gray-200 transition-colors leading-tight">
           Federation of Delhi Trade Association
         </span>
       </Link>
