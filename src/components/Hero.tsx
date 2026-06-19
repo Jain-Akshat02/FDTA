@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Users, Globe } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 export default function Hero() {
   const router = useRouter();
 
