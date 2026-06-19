@@ -2,8 +2,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Users, Globe } from "lucide-react";
-
+import { useRouter } from "next/router";
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-primary via-secondary to-primary relative overflow-hidden">
       {/* Background Pattern */}
@@ -54,11 +56,15 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
+              <button className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2"
+              onClick={() => router.push("/membership")}
+              >
                 Join Us Today
                 <ArrowRight size={20} />
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300"
+              onClick={()=> router.push("/about")}
+              >
                 Learn More
               </button>
             </motion.div>
