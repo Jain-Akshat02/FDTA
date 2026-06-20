@@ -57,9 +57,11 @@ export default function PayNow() {
     }
     if (!userInfo.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^[6-9]\d{9}$/.test(userInfo.phone.replace(/\s/g, ""))) {
-      newErrors.phone = "Enter a valid 10-digit Indian mobile number";
-    }
+    } else if (
+  !/^(0?[6-9]\d{9})$/.test(userInfo.phone.replace(/\s/g, ""))
+) {
+  newErrors.phone = "Enter a valid Indian mobile number";
+}
     if (!userInfo.membershipPlan) {
       newErrors.membershipPlan = "Please select a membership plan";
     }
@@ -169,7 +171,7 @@ Payment Completed: ${paymentMade ? "Yes" : "No"}`;
                   className="w-full p-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors"
                 />
                 {errors.fullName && (
-                  <p className="text-red-400 text-sm mt-1">{errors.fullName}</p>
+                  <p className="text-white text-sm mt-1">{errors.fullName}</p>
                 )}
               </div>
 
@@ -191,7 +193,7 @@ Payment Completed: ${paymentMade ? "Yes" : "No"}`;
                   className="w-full p-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors"
                 />
                 {errors.phone && (
-                  <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
+                  <p className="text-white text-sm mt-1">{errors.phone}</p>
                 )}
               </div>
 
