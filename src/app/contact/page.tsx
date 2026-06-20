@@ -1,27 +1,32 @@
 "use client";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-import axios from "axios"
-export default function Contact() {
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const formData = {
-    name: (form.firstName as HTMLInputElement).value,
-    email: (form.email as HTMLInputElement).value,
-    phone: (form.phone as HTMLInputElement).value,
-    message: (form.message as HTMLTextAreaElement).value,
-  };
 
-  const res = await axios.post("/api/contact", formData,{
-    headers:{"content-type": "application/json"}
-  });
-  if(res.status === 200) {
-    alert("Message sent successfully");
+const WHATSAPP_NUMBER = "918010090563";
+
+export default function Contact() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.firstName as HTMLInputElement).value.trim();
+    const email = (form.email as HTMLInputElement).value.trim();
+    const phone = (form.phone as HTMLInputElement).value.trim();
+    const message = (form.message as HTMLTextAreaElement).value.trim();
+
+    if (!name || !phone || !message) {
+      alert("Please fill in your name, phone number, and message.");
+      return;
+    }
+
+    const whatsappMessage = `New Contact Message
+
+Name: ${name}
+Email: ${email || "Not provided"}
+Phone: ${phone}
+Message: ${message}`;
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
   }
-  else{
-    alert("Something went wrong");
-  }
-}
 
   return (
     <div className="bg-gradient-to-br from-primary via-secondary to-primary">
@@ -96,6 +101,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="firstName"
+                    name="firstName"
                     placeholder="Enter your name" 
                     className="w-full p-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors"
                   />
@@ -120,6 +126,7 @@ export default function Contact() {
                 <input 
                   type="tel" 
                   id="phone"
+                  name="phone"
                   placeholder="Enter your phone number" 
                   className="w-full p-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors"
                 />
@@ -131,6 +138,7 @@ export default function Contact() {
                 </label>
                 <textarea 
                   id="message"
+                  name="message"
                   placeholder="Tell us more about your inquiry..." 
                   rows={5} 
                   className="w-full p-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors resize-none"

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
-
+import Router from "next/router";
 const features = [
   "Access to exclusive industry reports",
   "Priority registration for events",
@@ -10,6 +10,7 @@ const features = [
   "Access to members only meetings",
   "24/7 member support"
 ];
+const router = Router;
 
 export default function CTASection() {
   return (
@@ -77,7 +78,9 @@ export default function CTASection() {
               Start Your Membership
               <ArrowRight size={20} />
             </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+            <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300"
+              onClick={() => router.push("/contact")}
+            >
               Schedule a Consultation
             </button>
           </motion.div>
