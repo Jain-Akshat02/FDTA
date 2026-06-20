@@ -77,7 +77,7 @@ export default function Hero() {
               className="flex flex-wrap justify-center sm:justify-start gap-8 mt-12"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">10 lakh+</div>
+                <div className="text-3xl font-bold text-white">1 lakh+</div>
                 <div className="text-gray-200 text-sm">Active Members</div>
               </div>
               <div className="text-center">
