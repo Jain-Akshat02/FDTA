@@ -1,12 +1,26 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from 'next/image';
+
+const mobileLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/membership", label: "Membership" },
+  { href: "/events", label: "Events" },
+];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <motion.nav
@@ -33,8 +47,13 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden text-white hover:text-gray-200 transition-colors"
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsMenuOpen((open) => !open);
+        }}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        className="md:hidden relative z-[60] text-white hover:text-gray-200 transition-colors p-1"
       >
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -45,14 +64,19 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-0 right-0 bg-primary/98 backdrop-blur-lg border-b border-white/20 md:hidden"
+          className="absolute top-full left-0 right-0 z-[55] bg-primary/98 backdrop-blur-lg border-b border-white/20 md:hidden"
         >
           <div className="flex flex-col py-4">
-            <Link href="/" className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors">Home</Link>
-            <Link href="/about" className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors">About</Link>
-            <Link href="/contact" className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors">Contact</Link>
-            <Link href="/membership" className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors">Membership</Link>
-            <Link href="/events" className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors">Events</Link>
+            {mobileLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="px-8 py-3 text-white hover:text-gray-200 hover:bg-secondary/50 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </motion.div>
       )}
